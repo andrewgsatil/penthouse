@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hudson Penthouse | Exclusivity in New York</title>
+  
+  <!-- Preloads -->
+  <link rel="preload" as="image" href="assets/images/hero-day.jpg">
+  <link rel="preload" as="image" href="assets/images/hero-night.jpg">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Theme Init Script (to prevent FOUC) -->
+  <script>
+    (function() {
+      const pref = localStorage.getItem('theme-preference');
+      if (pref) {
+        document.documentElement.setAttribute('data-theme', pref);
+      } else {
+        const hour = new Date().getHours();
+        const theme = (hour >= 18 || hour < 6) ? 'night' : 'day';
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">The Hudson Penthouse</a>
+      <ul class="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class="ph ph-sun icon-sun"></i>
+          <i class="ph ph-moon icon-moon"></i>
+        </button>
+        <a href="#contact" class="btn btn-outline nav-cta">Schedule a Visit</a>
+        <button class="mobile-menu-toggle" aria-label="Menu"><i class="ph ph-list"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <button class="mobile-drawer-close" aria-label="Close menu"><i class="ph ph-x"></i></button>
+    <ul class="mobile-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <header class="hero">
+    <div class="hero-images">
+      <img src="assets/images/hero-day.jpg" alt="Living room day" class="hero-img hero-day">
+      <img src="assets/images/hero-night.jpg" alt="Living room night" class="hero-img hero-night">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal">
+      <span class="eyebrow">An exclusive penthouse — Manhattan</span>
+      <h1>Where the New York skyline becomes <em>part of your living room</em>.</h1>
+      <p class="subheadline">An architectural masterpiece suspended above the city, crafted for those who demand the extraordinary in every detail.</p>
+      <div class="hero-ctas">
+        <a href="#gallery" class="btn btn-primary">View Full Tour</a>
+        <a href="#contact" class="btn btn-outline">Download Brochure</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+    </div>
+  </header>
+
+  <div class="stats-bar reveal">
+    <div class="stat-item">
+      <i class="ph ph-arrows-out-line"></i>
+      <div class="stat-info">
+        <span class="stat-number">9,150</span>
+        <span class="stat-label">Total sq ft</span>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <i class="ph ph-bed"></i>
+      <div class="stat-info">
+        <span class="stat-number">4</span>
+        <span class="stat-label">Bedrooms</span>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <i class="ph ph-drop"></i>
+      <div class="stat-info">
+        <span class="stat-number">6</span>
+        <span class="stat-label">Bathrooms</span>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <i class="ph ph-buildings"></i>
+      <div class="stat-info">
+        <span class="stat-number">82nd</span>
+        <span class="stat-label">Floor</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="overview" class="overview section-padding">
+    <div class="container overview-grid">
+      <div class="overview-text reveal">
+        <span class="eyebrow">The definition of luxury</span>
+        <h2>Elevated design, <em>living without limits</em>.</h2>
+        <p>The Hudson Penthouse transcends the idea of a residence. It is a statement of achievement. With meticulously selected finishes and an open floor plan that embraces natural light, this space was conceived to provide an unparalleled living experience high above the city.</p>
+        <ul class="features-list">
+          <li><i class="ph ph-check"></i> <span>Italian-imported Calacatta marble in all bathrooms</span></li>
+          <li><i class="ph ph-check"></i> <span>Private elevator with direct biometric access to the gallery</span></li>
+          <li><i class="ph ph-check"></i> <span>Double-height 20-foot ceilings in the living area</span></li>
+        </ul>
+      </div>
+      <div class="overview-image reveal">
+        <img src="assets/images/kitchen.jpg" alt="Gourmet kitchen" width="600" height="750" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery section-padding bg-alt">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">Private collection</span>
+        <h2>Explore every <em>detail</em></h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-card tall reveal" data-src="assets/images/master-bedroom.jpg">
+          <img src="assets/images/master-bedroom.jpg" alt="Primary bedroom" loading="eager">
+          <div class="card-overlay">
+            <span>Primary suite</span>
+            <i class="ph ph-arrow-up-right"></i>
+          </div>
+        </div>
+        <div class="gallery-card wide reveal" data-src="assets/images/dining-room.jpg">
+          <img src="assets/images/dining-room.jpg" alt="Dining room" loading="eager">
+          <div class="card-overlay">
+            <span>Dining room</span>
+            <i class="ph ph-arrow-up-right"></i>
+          </div>
+        </div>
+        <div class="gallery-card reveal" data-src="assets/images/bathroom-tub.jpg">
+          <img src="assets/images/bathroom-tub.jpg" alt="Bathroom - tub" loading="eager">
+          <div class="card-overlay">
+            <span>Soaking tub suite</span>
+            <i class="ph ph-arrow-up-right"></i>
+          </div>
+        </div>
+        <div class="gallery-card reveal" data-src="assets/images/bathroom-vanity.jpg">
+          <img src="assets/images/bathroom-vanity.jpg" alt="Bathroom - vanity" loading="eager">
+          <div class="card-overlay">
+            <span>Vanity suite</span>
+            <i class="ph ph-arrow-up-right"></i>
+          </div>
+        </div>
+        <div class="gallery-card wide reveal" data-src="assets/images/home-office.jpg">
+          <img src="assets/images/home-office.jpg" alt="Home office" loading="eager">
+          <div class="card-overlay">
+            <span>Home office</span>
+            <i class="ph ph-arrow-up-right"></i>
+          </div>
+        </div>
+        <div class="gallery-card tall reveal" data-src="assets/images/terrace.jpg">
+          <img src="assets/images/terrace.jpg" alt="Terrace" loading="eager">
+          <div class="card-overlay">
+            <span>Private terrace</span>
+            <i class="ph ph-arrow-up-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="amenities" class="amenities section-padding">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">Exclusive amenities</span>
+        <h2>World-class <em>standard</em></h2>
+      </div>
+      <div class="amenities-grid">
+        <div class="amenity-card reveal">
+          <i class="ph ph-binoculars"></i>
+          <h3>270° panoramic views</h3>
+          <p>Enjoy the sunrise and sunset with uninterrupted views of the river and the Manhattan skyline.</p>
+        </div>
+        <div class="amenity-card reveal">
+          <i class="ph ph-drop"></i>
+          <h3>Private spa</h3>
+          <p>Bathrooms equipped with heated floors, double rain showers, and a stone-carved soaking tub.</p>
+        </div>
+        <div class="amenity-card reveal">
+          <i class="ph ph-faders"></i>
+          <h3>Full home automation</h3>
+          <p>Integrated control of lighting, climate, shades, and sound via a state-of-the-art Crestron system.</p>
+        </div>
+        <div class="amenity-card reveal">
+          <i class="ph ph-shield-check"></i>
+          <h3>Security & discretion</h3>
+          <p>24-hour doorman, restricted biometric access, and a dedicated concierge team for penthouse residents.</p>
+        </div>
+        <div class="amenity-card reveal">
+          <i class="ph ph-fire"></i>
+          <h3>Terrace with fire pit</h3>
+          <p>Over 1,000 sq ft of outdoor space featuring signature landscaping and a linear fire pit for cool evenings.</p>
+        </div>
+        <div class="amenity-card reveal">
+          <i class="ph ph-wine"></i>
+          <h3>Climate-controlled wine cellar</h3>
+          <p>Custom-built space with a 500-bottle capacity and precise temperature and humidity control.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" class="location section-padding bg-alt">
+    <div class="container location-grid">
+      <div class="location-map reveal">
+        <div class="location-map-wrapper">
+          <iframe
+            class="location-map-iframe"
+            src="https://www.google.com/maps?q=100+Hudson+Street,+New+York,+NY+10013&output=embed"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="eager"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Property location map"
+          ></iframe>
+        </div>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=100+Hudson+Street,+New+York,+NY+10013"
+          target="_blank"
+          rel="noopener"
+          class="location-map-link"
+        >
+          Open in Google Maps &rarr;
+        </a>
+      </div>
+      <div class="location-info reveal">
+        <span class="eyebrow">The address</span>
+        <h2>In the heart of <em>excellence</em></h2>
+        <p>Situated on the most coveted block in Tribeca, the Hudson Penthouse offers the perfect blend of riverside tranquility and the vibrant pulse of the city, just steps away from fine dining and designer boutiques.</p>
+        <ul class="poi-list">
+          <li>
+            <i class="ph ph-fork-knife"></i>
+            <div>
+              <strong>Dining</strong>
+              <span>Le Bernardin (3 min)</span>
+            </div>
+          </li>
+          <li>
+            <i class="ph ph-palette"></i>
+            <div>
+              <strong>Culture</strong>
+              <span>MoMA & Chelsea Galleries (5 min)</span>
+            </div>
+          </li>
+          <li>
+            <i class="ph ph-tree"></i>
+            <div>
+              <strong>Nature</strong>
+              <span>Hudson River Park (2 min)</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="cta-bg">
+      <img src="assets/images/terrace.jpg" alt="Terrace" loading="eager">
+    </div>
+    <div class="cta-overlay"></div>
+    <div class="cta-content reveal">
+      <h2>Schedule your private viewing</h2>
+      <p>A rare opportunity to own the pinnacle of contemporary residential design.</p>
+      <a href="#contact" class="btn btn-primary">Speak with a Broker</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact section-padding">
+    <div class="container contact-grid">
+      <div class="contact-broker reveal">
+        <span class="eyebrow">VIP service</span>
+        <h2>Private <em>brokerage</em></h2>
+        <p>Our team is available to present every detail of this unique property with utmost discretion and exclusivity.</p>
+        <div class="broker-card">
+          <div class="broker-avatar">
+            <i class="ph ph-user"></i>
+          </div>
+          <div class="broker-details">
+            <h4>Alexander Vance</h4>
+            <p>Senior partner, Luxury Division</p>
+            <a href="tel:+15550198273"><i class="ph ph-phone"></i> +1 (555) 019-8273</a>
+            <a href="mailto:alexander@hudson.com"><i class="ph ph-envelope"></i> alexander@hudson.com</a>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form reveal" onsubmit="event.preventDefault();">
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input type="text" id="name" placeholder="Your name" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="(555) 000-0000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message (optional)</label>
+          <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h3>The Hudson Penthouse</h3>
+        <p>Elevating the standard of living in New York.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#location">Location</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>100 Hudson Street, PH<br>New York, NY 10013</p>
+        <p>+1 (555) 019-8273</p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Hudson Penthouse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
